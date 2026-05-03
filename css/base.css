@@ -63,7 +63,7 @@ h1, h2, h3 {
 fieldset {
 	margin: 0;
 	padding: 0;
-	bottom: 0;
+	border: 0;
 }
 
 .visually-hidden {
@@ -75,4 +75,24 @@ fieldset {
 	max-width: calc(var(--container) + var(--padding-container) * 2);
 	padding: 0 var(--padding-container);
 	margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+	html {
+		--padding-container: 20px;
+		--container: 728px;
+	}
+}
+
+@media (min-width: 1200px) {
+	html {
+		--padding-container: 20px;
+		--container: 1160px;
+	}
+}
+
+@media (min-width: 1440px) {
+	html {
+		--container: 1320px;
+	}
 }

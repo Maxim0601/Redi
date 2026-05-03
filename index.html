@@ -20,87 +20,94 @@
 
 <body>
 
-	<header class="header">
-		<div class="container header__container">
+	<header class="site-header">
+		<div class="container site-header__container">
+			<a class="site-header__logo-link" href="#" aria-label="На головну сторінку Redi">
+				<img class="site-header__logo" src="img/logo/Logo.svg" alt="Redi Logo">
+			</a>
 
-			<div class="header__top">
-				<a class="header__logo-link" href="#" aria-label="На головну сторінку Redi">
-					<img class="header__logo" src="img/logo/Logo.svg" alt="Redi Logo">
-				</a>
+			<nav class="site-header__nav" aria-label="Основна навігація">
+				<ul class="site-header__list">
+					<li class="site-header__item">
+						<a class="site-header__link site-header__link--active" href="#about">Про нас</a>
+					</li>
+					<li class="site-header__item">
+						<a class="site-header__link" href="#products">Продукти</a>
+					</li>
+					<li class="site-header__item">
+						<a class="site-header__link" href="#reviews">Відгуки</a>
+					</li>
+					<li class="site-header__item">
+						<a class="site-header__link" href="#faq">FAQ</a>
+					</li>
+				</ul>
+			</nav>
 
-				<nav class="header__nav" aria-label="Основна навігація">
-					<ul class="header__list">
-						<li class="header__item">
-							<a class="header__link header__link--active" href="#about">Про нас</a>
-						</li>
-						<li class="header__item">
-							<a class="header__link" href="#products">Продукти</a>
-						</li>
-						<li class="header__item">
-							<a class="header__link" href="#reviews">Відгуки</a>
-						</li>
-						<li class="header__item">
-							<a class="header__link" href="#faq">FAQ</a>
-						</li>
-					</ul>
-					
-				</nav>
+			<a class="site-header__phone" href="tel:+380966273784">
+				+380966273784
+			</a>
 
-							<a class="header__phone" href="tel:+380966273784">
-								+380 (96) 627-37-84
-							</a>
+			<button class="site-header__burger" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mobile-menu">
+				<span class="site-header__burger-line"></span>
+				<span class="site-header__burger-line"></span>
+				<span class="site-header__burger-line"></span>
+			</button>
+		</div>
+	</header>
 
-				<button class="header__burger" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mobile-menu">
-					<span class="header__burger-line"></span>
-					<span class="header__burger-line"></span>
-					<span class="header__burger-line"></span>
-				</button>
-
-			</div>
-
-			<div class="header__hero">
-				<h1 class="header__title">Технології перемоги – заради життя</h1>
-
-				<p class="header__text">
+	<section class="hero">
+		<div class="container hero__container">
+			<div class="hero__content">
+				<h1 class="hero__title">Технології перемоги – заради життя</h1>
+				
+				<p class="hero__text">
 					Українські системи <br class="mobile-break">
 					радіоелектронної боротьби (РЕБ)
 				</p>
 
-				<div class="header__actions">
+				<p class="hero__text hero__text--secondary">
+					Прості у використанні. Перевірені військовими
+				</p>
+
+				<div class="hero__actions">
 					<a class="button button--primary" href="#request">Залишити заявку</a>
 					<a class="button button--secondary" href="#donate">Підтримати донатом</a>
 				</div>
+
+				<p class="hero__caption">
+					Рішення, які вже працюють на фронті
+				</p>
+
 			</div>
-
 		</div>
+	</section>
 
-		<div class="header__mobile-menu" id="mobile-menu">
-			<button class="header__menu-close" type="button" aria-label="Закрити меню"></button>
+	<div class="mobile-menu" id="mobile-menu">
+		<button class="mobile-menu__close" type="button" aria-label="Закрити меню"></button>
 
-			<a class="header__mobile-phone" href="tel:+380966273784">
-				+380 (96) 627-37-84
-			</a>
+		<a class="mobile-menu__phone" href="tel:+380966273784">
+			+380 (96) 627-37-84
+		</a>
 
-			<nav class="header__mobile-nav" aria-label="Мобільна навігація">
-				<ul class="header__mobile-list">
-						<li class="header__mobile-item">
-							<a class="header__mobile-link header__link--active" href="#about">Про нас</a>
-						</li>
-						<li class="header__mobile-item">
-							<a class="header__mobile-link" href="#products">Продукти</a>
-						</li>
-						<li class="header__mobile-item">
-							<a class="header__mobile-link" href="#reviews">Відгуки</a>
-						</li>
-						<li class="header__mobile-item">
-							<a class="header__mobile-link" href="#faq">FAQ</a>
-						</li>
-					</ul>
-			</nav>
+		<nav class="mobile-menu__nav" aria-label="Мобільна навігація">
+			<ul class="mobile-menu__list">
+				<li class="mobile-menu__item">
+					<a class="mobile-menu__link mobile-menu__link--active" href="#about">Про нас</a>
+				</li>
+				<li class="mobile-menu__item">
+					<a class="mobile-menu__link" href="#products">Продукти</a>
+				</li>
+				<li class="mobile-menu__item">
+					<a class="mobile-menu__link" href="#reviews">Відгуки</a>
+				</li>
+				<li class="mobile-menu__item">
+					<a class="mobile-menu__link" href="#faq">FAQ</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
 
-		</div>
-
-	</header>
+	
 
 
 	<main>
