@@ -79,20 +79,21 @@ fieldset {
 
 @media (min-width: 768px) {
 	html {
-		--padding-container: 20px;
 		--container: 728px;
+		--padding-container: 20px;
 	}
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
 	html {
-		--padding-container: 20px;
-		--container: 1160px;
+		--container: 944px;
+		--padding-container: 40px;
 	}
 }
 
 @media (min-width: 1440px) {
 	html {
-		--container: 1320px;
+		--container: 1760px;
+		--padding-container: 80px;
 	}
 }
