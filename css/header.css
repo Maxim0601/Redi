@@ -213,6 +213,19 @@ body.menu-open {
 }
 
 @media (min-width: 768px) {
+		
+	.site-header__logo {
+		width: 50px;
+		height: 35px;
+	}
+
+	.site-header__burger-line {
+		width: 30px;
+	}
+
+	.hero {
+		background-position: 42% center;
+	}
 	
 	.hero__title {
 		margin-bottom: 20px;
@@ -223,10 +236,74 @@ body.menu-open {
 	.hero__text {
 		font-size: 18px;
 	}
+
+	.hero__actions {
+		flex-direction: row;
+		justify-content: center;
+	}
 }
 
 @media (min-width: 1024px) {
 	
+	.site-header__container {
+		justify-content: space-around;
+		gap: 34px;
+	}
+
+	.site-header__nav {
+		display: flex;
+	}
+
+	.site-header__list {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 34px;
+		color: #2f2f2f;
+	}
+
+	.site-header__phone {
+		display: inline-flex;
+		color: #2f2f2f;
+	}
+
+	.hero {
+		background-image: url('../img/header/header-bg-desctop.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 36% 3%;
+
+		clip-path: polygon(
+			0 0,
+			100% 0,
+			100% calc(100% - 23px),
+			78.4% calc(100% - 23px),
+			73.9% 100%,
+			25.9% 100%,
+			21.6% calc(100% - 23px),
+			0 calc(100% - 23px)
+			);
+	}
+	
+	.hero__title {
+		margin-bottom: 20px;
+		font-size: 55px;
+		letter-spacing: -1.4px;
+	}
+
+	.hero__text {
+		font-size: 18px;
+	}
+
+	.hero__actions {
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.mobile-menu__nav,
+	.site-header__burger {
+		display: none;
+	}
 }
 
 @media (min-width: 1440px) {
