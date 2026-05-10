@@ -55,7 +55,7 @@ body.menu-open {
 .hero {
 	position: relative;
 	overflow: hidden;
-	min-height: 513;
+	min-height: 513px;
 	padding: 109px 0 60px;
 	color: #fff;
 	background-color: #2f2f2f;
@@ -213,7 +213,13 @@ body.menu-open {
 }
 
 @media (min-width: 768px) {
-		
+
+	.site-header__container {
+		height: 92px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
 	.site-header__logo {
 		width: 50px;
 		height: 35px;
@@ -245,9 +251,8 @@ body.menu-open {
 
 @media (min-width: 1024px) {
 	
-	.site-header__container {
-		justify-content: space-around;
-		gap: 34px;
+	.site-header--scrolled .site-header__link {
+		color: #fff;
 	}
 
 	.site-header__nav {
@@ -259,12 +264,13 @@ body.menu-open {
 		align-items: center;
 		justify-content: center;
 		gap: 34px;
-		color: #2f2f2f;
+		/* color: #2f2f2f; */
+		color: red;
 	}
 
 	.site-header__phone {
-		display: inline-flex;
-		color: #2f2f2f;
+		display: flex;
+		color: #fff;
 	}
 
 	.hero {
@@ -284,6 +290,8 @@ body.menu-open {
 			0 calc(100% - 23px)
 			);
 	}
+
+	.hero__inner {}
 	
 	.hero__title {
 		margin-bottom: 20px;

@@ -80,14 +80,14 @@ fieldset {
 @media (min-width: 768px) {
 	html {
 		--container: 728px;
-		--padding-container: 20px;
+		--padding-container: 40px;
 	}
 }
 
 @media (min-width: 1024px) {
 	html {
-		--container: 944px;
-		--padding-container: 40px;
+		--container: 934px;
+		--padding-container: 45px;
 	}
 }
 
