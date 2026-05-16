@@ -9,7 +9,7 @@ body.menu-open {
 	right: 0;
 	z-index: 100;
 	background-color: transparent;
-	transition: background-color 0.3s ease;
+	transition: top 0.3s ease, background-color 0.3s ease;
 }
 
 .site-header--scrolled {
@@ -250,48 +250,116 @@ body.menu-open {
 }
 
 @media (min-width: 1024px) {
+
+	.site-header {
+		top: 45px;
+	}
+
+	.site-header__container {
+		display: grid;
+		grid-template-columns: 1fr auto 1fr;
+		align-items: center;
+		height: 72px;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.site-header__logo-link{
+		justify-self: center;
+	}
 	
-	.site-header--scrolled .site-header__link {
+	.site-header--scrolled 
+	.site-header__link {
 		color: #fff;
 	}
 
-	.site-header__nav {
+	.site-header--scrolled {
+		top: 0;
+	}
+
+	.site-header__logo {
+		width: 60px;
+		height: 45px;
+	}
+
+	.site-header__nav{
 		display: flex;
+		justify-self: center;
+		align-items: center;
+		height: 100%;
+
 	}
 
 	.site-header__list {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		height: 100%;
 		gap: 34px;
-		/* color: #2f2f2f; */
-		color: red;
+		color: #2f2f2f;
+		font-size: 18px;
+	}
+
+	.site-header__link {
+		display: inline-flex;
+		align-items: center;
+		line-height: 1;
 	}
 
 	.site-header__phone {
 		display: flex;
+		justify-self: center;
 		color: #fff;
+		font-size: 18px;
 	}
 
 	.hero {
+		background-color: transparent;
+		background-image: none;
+		padding: 45px 0 0;
+	}
+
+	.hero::before {
+		background-color: transparent;
+	}
+
+	.hero__inner {
+		position: relative;
+		overflow: hidden;
+		min-height: 600px;
+		padding: 109px 0 60px;
+		color: #fff;
+		background-color: #2f2f2f;
 		background-image: url('../img/header/header-bg-desctop.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: 36% 3%;
+		background-position: center 42%;
 
 		clip-path: polygon(
 			0 0,
+			21.6% 0,
+			25.9% 55px,
+			74.1% 55px,
+			78.4% 0,
 			100% 0,
-			100% calc(100% - 23px),
-			78.4% calc(100% - 23px),
+
+			100% calc(100% - 55px),
+
+			78.4% calc(100% - 55px),
 			73.9% 100%,
 			25.9% 100%,
-			21.6% calc(100% - 23px),
-			0 calc(100% - 23px)
-			);
-	}
+			21.6% calc(100% - 55px),
 
-	.hero__inner {}
+			0 calc(100% - 55px)
+			);
+		}
+
+	.hero__inner::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-color: rgba(47, 47, 47, 0.75);
+	}
 	
 	.hero__title {
 		margin-bottom: 20px;
