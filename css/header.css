@@ -343,8 +343,8 @@ body.menu-open {
 	}
 
 	.site-header__link:focus-visible {
-	outline: 1px solid #262626;
-	outline-offset: 4px;
+		outline: 1px solid #262626;
+		outline-offset: 4px;
 	}
 
 	.site-header--scrolled .site-header__link:hover {

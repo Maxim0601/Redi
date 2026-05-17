@@ -2,8 +2,10 @@
 	display: inline-flex;
 	justify-content: center;
 	text-align: center;
+	align-items: center;
 	font-weight: 600;
 	font-size: 16px;
+	line-height: 1.2;
 	cursor: pointer;
 	padding: 20px 0;
 	transition:
@@ -40,6 +42,7 @@
 
 .button--secondary:hover {
 	background-color: #EAEAEA;
+	color: #2F2F2F;
 }
 
 .button--secondary:active {
