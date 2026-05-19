@@ -1,5 +1,7 @@
 @import 'normalize.css';
 @import 'fonts.css';
 @import 'base.css';
-@import 'header.css';
 @import 'button.css';
+@import 'section-title.css';
+@import 'header.css';
+@import 'main.css';
