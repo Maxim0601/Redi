@@ -483,6 +483,10 @@ body.menu-open {
 		top: 80px;
 	}
 
+	.site-header--scrolled {
+		top: 0;
+	}
+
 	.site-header__container {
 		display: grid;
 		grid-template-columns: 1fr 3fr 1fr;
