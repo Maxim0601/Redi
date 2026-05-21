@@ -1,0 +1,41 @@
+.threat {
+	padding: 87px 0 100px;
+}
+
+.threat__inner {
+	display: flex;
+	flex-direction: column;
+}
+
+.threat__title {
+	margin-bottom: 16px;
+}
+
+.threat__text {
+	font-size: 16px;
+	line-height: 1.26;
+	margin-bottom: 34px;
+}
+
+.threat__cards {
+	display: flex;
+	gap: 6px;
+	margin-bottom: 34px;
+}
+
+.threat__card {
+	
+}
+
+.threat__card-value {
+	font-size: 41px;
+	font-weight: 500;
+	color: #fff;
+	background-color: #2F2F2F;
+	margin-bottom: 10px;
+}
+
+.threat__card-text {
+	font-size: 14px;
+	line-height: 1.3;
+}
