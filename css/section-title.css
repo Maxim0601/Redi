@@ -3,3 +3,21 @@
 	line-height: 1.16;
 	font-weight: 600;
 }
+
+@media (min-width: 768px) {
+	.section-title {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.section-title {
+		font-size: 20px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.section-title {
+		font-size: 32px;
+	}
+}
