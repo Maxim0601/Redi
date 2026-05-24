@@ -57,7 +57,13 @@
 	margin-top: 10px;
 }
 
+.threat__cta {
+	font-size: 16px;
+	line-height: 1.25;
+}
+
 @media (min-width: 768px) {
+	
 	.threat {
 		padding: 100px 0 120px;
 	}
@@ -92,13 +98,14 @@
 		width: 100%;
 		padding: 16px;
 		font-size: 52px;
+		clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px);
 	}
 
-	.threat__value--primary {
+	.threat__card-value--primary {
 		min-height: 230px;
 	}
 
-	.threat__value--secondary {
+	.threat__card-value--secondary {
 		min-height: 160px;
 	}
 
@@ -115,7 +122,118 @@
 }
 
 @media (min-width: 1024px) {
-	
+
+	.threat__inner {
+		display: grid;
+		grid-template-columns: minmax(220px, 0.85fr) minmax(0, 1.6fr);
+		column-gap: 48px;
+		row-gap: 34px;
+		align-items: start;
+		max-width: none;
+		margin: 0;
+	}
+
+	.threat__title {
+		grid-column: 1;
+		grid-row: 1;
+		margin-bottom: 0;
+		max-width: 280px;
+	}
+
+	.threat__text {
+		grid-column: 2;
+		grid-row: 1;
+		max-width: 620px;
+		margin-bottom: 0;
+		font-size: 26px;
+		line-height: 1.35;
+	}
+
+	.threat__cards {
+		grid-column: 2;
+		grid-row: 2;
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+		align-items: start;
+		gap: 16px;
+		margin-bottom: 0;
+	}
+
+	.threat__card {
+		width: auto;
+		min-width: 0;
+	}
+
+	.threat__card-value {
+		font-size: 60px;
+	}
+
+	.threat__card-value--primary {
+		min-height: 350px;
+	}
+
+	.threat__card-value--secondary {
+		min-height: 190px;
+	}
+
+	.threat__card-text {
+		margin-top: 20px;
+		font-size: 20px;
+	}
+
+	.threat__cta {
+		grid-column: 1;
+		grid-row: 2;
+		align-self: end;
+		max-width: 270px;
+		font-size: 18px;
+	}
 }
 
-@media (min-width: 1440px) {}
+@media (min-width: 1440px) {
+
+	.threat {
+		padding: 200px 0 200px;
+	}
+
+	.threat__inner {
+		column-gap: 50px;
+		row-gap: 74px;
+	}
+
+	.threat__title {
+		max-width: 355px;
+	}
+
+	.threat__text {
+		max-width: 1000px;
+		font-size: 44px;
+	}
+
+	.threat__cards {
+		gap: 22px;
+	}
+
+	.threat__card-value {
+		font-size: 121px;
+		padding: 24px;
+		clip-path: polygon(55px 0, 100% 0, 100% 100%, 0 100%, 0 55px);
+	}
+
+	.threat__card-value--primary {
+		min-height: 653px;
+	}
+
+	.threat__card-value--secondary {
+		min-height: 480px;
+	}
+
+	.threat__card-text {
+		margin-top: 30px;
+		font-size: 24px;
+	}
+
+	.threat__cta {
+		max-width: 420px;
+	}
+}

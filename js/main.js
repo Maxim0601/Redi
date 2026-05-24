@@ -1,3 +1,5 @@
+/*Початок js логіки для header*/
+
 const siteHeader = document.querySelector('.site-header');
 const burger = document.querySelector('.site-header__burger');
 const mobileMenu = document.querySelector('.mobile-menu');
@@ -39,3 +41,68 @@ document.addEventListener('keydown', (event) => {
 
 window.addEventListener('scroll', toggleHeaderBackground);
 toggleHeaderBackground();
+
+/*Кінець js логіки для header*/
+
+/*Початок js логіки для threat cards*/
+const threatValues = document.querySelectorAll('.threat__card-value');
+
+function animateValue(element, target, duration = 1400) {
+	const start = 0;
+	const startTime = performance.now();
+
+	function update(currentTime) {
+		const elapsedTime = currentTime - startTime;
+		const progress = Math.min(elapsedTime / duration, 1);
+
+		const easedProgress = 1 - Math.pow(1 - progress, 3);
+		const currentValue = Math.round(start + (target - start) * easedProgress);
+		element.textContent = `${currentValue}%`;
+
+		if (progress < 1) {
+			requestAnimationFrame(update);
+		} else {
+			element.textContent = `${target}%`;
+		}
+	}
+
+	requestAnimationFrame(update);
+}
+
+function initThreatAnimation() {
+	if (!threatValues.length) return;
+
+	const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+	const observer = new IntersectionObserver(
+		(entries, observerInstance) => {
+			entries.forEach((entry) => {
+				if (!entry.isIntersecting) return;
+
+				const valueElement = entry.target;
+				const targetValue = Number(valueElement.dataset.target);
+
+				if (!Number.isFinite(targetValue)) return;
+
+				if (prefersReducedMotion) {
+					valueElement.textContent = `${targetValue}%`;
+				} else {
+					valueElement.textContent = '0%';
+					animateValue(valueElement, targetValue);
+				}
+
+				observerInstance.unobserve(valueElement);
+			});
+		},
+		{
+			threshold: 0.4,
+		}
+	);
+
+	threatValues.forEach((valueElement) => {
+		observer.observe(valueElement);
+	});
+}
+
+initThreatAnimation();
+/*Кінець js логіки для threat cards*/
