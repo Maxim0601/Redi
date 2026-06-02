@@ -42,12 +42,14 @@
 }
 
 .threat__card-value--primary {
-	min-width: 154px;
+	min-width: 0;
+	width: 100%;
 	min-height: 194px;
 }
 
 .threat__card-value--secondary {
-	min-width: 154px;
+	min-width: 0;
+	width: 100%;
 	min-height: 118px; 
 }
 

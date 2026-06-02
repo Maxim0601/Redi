@@ -1,0 +1,104 @@
+.protection-steps {
+	padding-bottom: 76px;
+}
+
+.protection-steps__inner {
+	display: flex;
+	flex-direction: column;
+}
+
+.protection-steps__title {
+	margin-bottom: 22px;
+}
+
+.protection-steps__cards {
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+}
+
+.protection-steps__card {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 10px 15px 21px 10px;
+	min-height: 121px;
+	width: 100%;
+	min-width: 0;
+	clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+}
+
+.protection-steps__card-image {
+	width: 23px;
+	height: 23px;
+	margin-bottom: 15px;
+}
+
+.protection-steps__card-title {
+	font-size: 20px;
+	margin-bottom: 7px;
+	font-weight: 700;
+	line-height: 1.1;
+}
+
+.protection-steps__card-text {
+	font-size: 14px;
+	line-height: 1.14;
+}
+
+.protection-steps__card--white {
+	background-color: #fff;
+}
+
+.protection-steps__card--dark {
+	background-color: #2F2F2F;
+	color: #fff;
+}
+
+.protection-steps__card--green {
+	background-color: #C4F44A;
+}
+
+.protection-steps__cta {
+	font-size: 12px;
+	line-height: 1.14;
+	margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+	.protection-steps {
+		padding-bottom: 95px;
+}
+
+.protection-steps__cards {
+	gap: 16px;
+}
+
+.protection-steps__card {
+	padding: 16px 16px 30px 16px;
+	min-height: 130px;
+	clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 0 100%);
+}
+
+.protection-steps__card-image {
+	width: 30px;
+	height: 30px;
+	margin-bottom: 20px;
+}
+
+.protection-steps__card-title {
+	font-size: 24px;
+	margin-bottom: 12px;
+}
+
+.protection-steps__card-text {
+	font-size: 16px;
+}
+
+.protection-steps__cta {
+	font-size: 18px;
+	margin-top: 25px;
+	}
+}
+
+@media (min-width: 1024px) {}
