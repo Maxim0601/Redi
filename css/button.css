@@ -58,6 +58,30 @@
 	outline-offset: 2px;
 }
 
+.button--tertiary {
+	background-color: transparent;
+	color: #2F2F2F;
+	border: 2px solid #2F2F2F;
+}
+
+.button--tertiary:hover {
+	background-color: #2F2F2F;
+	color: #EAEAEA;
+}
+
+.button--tertiary:active {
+	background-color: #2F2F2F;
+	color: #C3C3C3;
+	transform: translateY(1px);
+}
+
+.button--tertiary:focus-visible {
+	background-color: #2F2F2F;
+	color: #D6D6D6;
+	outline: 2px solid #fff;
+	outline-offset: 2px;
+}
+
 @media (min-width: 768px) {
 	.button{
 		padding: 20px 30px;
