@@ -66,6 +66,11 @@ fieldset {
 	border: 0;
 }
 
+dl, dt, dd {
+	margin: 0;
+	padding: 0;
+}
+
 .visually-hidden {
 	position: fixed;
 	transform: scale(0);

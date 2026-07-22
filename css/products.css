@@ -89,3 +89,33 @@
 	font-size: 16px;
 	line-height: 1.14;
 }
+
+.product-card__summary {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.product-card__summary-item {
+	display: flex;
+	flex-direction: column;
+}
+
+.product-card__summary-term,
+.product-card__summary-value {
+	padding: 10px 12px 8px 27px;
+	line-height: 1.14;
+}
+
+.product-card__summary-term {
+	border: 1px solid #eaeaea;
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 2px;
+}
+
+.product-card__summary-value {
+	background-color: #eaeaea;
+	font-size: 18px;
+	font-weight: 400;
+}
