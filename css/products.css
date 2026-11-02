@@ -217,3 +217,94 @@
 	gap: 8px;
 }
 
+@media (min-width: 768px) {
+.products__intro {
+	padding-bottom: 30px;
+}
+
+.mobile-break{
+	display: none;
+}
+
+.products__intro::after {
+	width: 300px;
+	height: 300px;
+}
+
+.products__title {
+	max-width: 250px;
+}
+
+.products__content {
+	padding: 85px 0 70px;
+}
+
+.products__list {
+	gap: 70px;
+}
+
+.product-card__media {
+	aspect-ratio: 16 / 9;
+	padding: 0;
+}
+
+.product-card__image {
+	max-width: 300px;
+	max-height: 300px;
+}
+
+.product-card__intro {
+	padding: 45px 0 40px;
+}
+
+.product-card__title {
+	font-size: 26px;
+	margin-bottom: 16px;
+}
+
+.product-card__description {
+	font-size: 18px;
+}
+
+.product-card__summary {
+	gap: 12px;
+}
+
+.product-card__summary-term {
+	font-size: 18px;
+	margin-bottom: 4px;
+}
+
+.product-card__specifications {
+	gap: 12px;
+}
+
+.product-card__specification-term {
+	font-size: 18px;
+	margin-bottom: 4px;
+}
+
+.product-card__equipment {
+	gap: 12px;
+}
+
+.product-card__equipment-name {
+	font-size: 18px;
+	margin-bottom: 4px;
+}
+
+.product-card__documents {
+	justify-content: flex-start;
+}
+
+.product-card__document-link {
+	gap: 10px;
+	margin-right: 50px;
+}
+
+.product-card__actions {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	}
+}

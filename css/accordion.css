@@ -67,3 +67,10 @@
 .accordion__panel[hidden] {
 	display: none;
 }
+
+@media (min-width: 768px) {
+
+.accordion__trigger-text {
+	font-size: 18px;
+	}
+}
