@@ -222,7 +222,7 @@
 	padding-bottom: 30px;
 }
 
-.mobile-break{
+.products .mobile-break{
 	display: none;
 }
 
@@ -295,11 +295,11 @@
 
 .product-card__documents {
 	justify-content: flex-start;
+	gap: 50px;
 }
 
 .product-card__document-link {
 	gap: 10px;
-	margin-right: 50px;
 }
 
 .product-card__actions {
@@ -373,113 +373,148 @@
 
 .product-card__summary-term,
 .product-card__summary-value {
-	padding: 8px 10px;
+	padding: 8px 15px;
 	font-size: 16px;
 	margin-bottom: 0;
 }
 
 .product-card__specifications {
-	display: flex;
-	flex-direction: column;
-	gap: 8px;
+	gap: 6px;
+}
+.product-card__specification {
+	display: grid;
+	grid-template-columns: minmax(0, 40%) minmax(0, 1fr);
+	gap: 6px;
 }
 
 .product-card__specification-term,
 .product-card__specification-value {
-	padding: 10px 12px 8px 27px;
-	line-height: 1.14;
-}
-
-.product-card__specification-term {
-	border: 1px solid #eaeaea;
+	padding: 8px 15px;
 	font-size: 16px;
-	font-weight: 600;
-	margin-bottom: 2px;
-}
-
-.product-card__specification-value {
-	background-color: #eaeaea;
-	font-size: 18px;
-	font-weight: 400;
+	margin-bottom: 0;
 }
 
 .product-card__equipment {
-	display: flex;
-	flex-direction: column;
-	gap: 8px;
+	gap: 6px;
+}
+
+.product-card__equipment-item {
+	display: grid;
+	grid-template-columns: minmax(0, 40%) minmax(0, 1fr);
+	gap: 6px;
 }
 
 .product-card__equipment-name,
 .product-card__equipment-quantity {
-	padding: 10px 12px 8px 27px;
-	line-height: 1.14;
-}
-
-.product-card__equipment-name {
-	border: 1px solid #eaeaea;
+	padding: 8px 15px;
 	font-size: 16px;
-	font-weight: 600;
-	margin-bottom: 2px;
-}
-
-.product-card__equipment-quantity {
-	background-color: #eaeaea;
-	font-size: 18px;
-	font-weight: 400;
+	margin-bottom: 0;
 }
 
 .product-card__documents {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin-bottom: 38px;
+	justify-content: flex-start;
+	margin-bottom: 0;
 }
 
 .product-card__document-link {
-	display: inline-flex;
-	align-items: center;
-	gap: 6px;
-	padding-bottom: 2px;
-	border-bottom: 2px solid #D9D9D9;
-}
-
-.product-card__document-name {
-	font-size: 18px;
-	font-weight: 600;
-	line-height: 1.14;
-}
-
-.product-card__document-icon {
-	display: inline-block;
-	flex-shrink: 0;
-	width: 24px;
-	height: 24px;
-	background-color: #D9D9D9;
-	-webkit-mask-image: url('../img/download_icon.svg');
-	-webkit-mask-repeat: no-repeat;
-	-webkit-mask-position: center;
-	-webkit-mask-size: contain;
-	mask-image: url('../img/download_icon.svg');
-	mask-repeat: no-repeat;
-	mask-position: center;
-	mask-size: contain;
+	gap: 10px;
 }
 
 .product-card__actions {
 	grid-area: actions;
 	display: flex;
 	flex-direction: row;
+	justify-content: flex-start;
 	align-self: start;
 	align-items: stretch;
 	height: fit-content;
-	gap: 8px;
 	margin-top: 0;
-}
-
- .product-card__actions .button {
-	flex: 1 1 0;
-  min-width: 0;
-  height: auto;
 	}
 }
 
+@media (min-width: 1024px) and (max-width: 1439.98px) {
+.product-card__actions .button {
+	flex: 1;
+  min-width: 0;
+  padding: 12px 8px;
+  font-size: 16px;
+  white-space: nowrap;
+	}
+}
+
+
+@media (min-width: 1440px) {
+.products__intro {
+	padding-bottom: 70px;
+}
+
+.products__intro::after {
+	width: 800px;
+	height: 800px;
+}
+
+.products__title {
+	max-width: 450px;
+}
+
+.products__content {
+	padding: 124px 0 104px;
+}
+
+.products__list {
+	gap: 115px;
+}
+
+.product-card {
+	grid-template-columns:  minmax(0, 1.25fr) minmax(0, 1fr);
+	column-gap: clamp(60px, 10.1vw, 194px);
+  row-gap: clamp(80px, 10.1vw, 194px);
+  align-content: start;
+}
+
+.product-card__media {
+	width: 100%;
+  max-width: none;
+  aspect-ratio: 1 / 1;
+  padding: 10.23%;
+}
+
+.product-card__image {
+	width: 100%;
+	max-width: 692px;
+	height: auto;
+	max-height: 692px;
+	object-fit: contain;
+}
+
+.product-card__title {
+	font-size: 32px;
+}
+
+.product-card__summary-term,
+.product-card__summary-value {
+	font-size: 18px;
+}
+
+.product-card__specification-term,
+.product-card__specification-value {
+	font-size: 18px;
+}
+
+.product-card__equipment-name,
+.product-card__equipment-quantity {
+	font-size: 18px;
+}
+
+
+.product-card__actions {
+  gap: 16px;
+	}
+	
+	.product-card__actions .button {
+		flex: 0 1 342px;
+    min-width: 0;
+    font-size: clamp(16px, 1.25vw, 24px);
+    white-space: nowrap;
+	}
+}
