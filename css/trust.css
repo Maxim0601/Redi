@@ -69,7 +69,6 @@
 .trust__inner {
 	display: grid;
 	grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-	column-gap: 24px;
 	align-items: start;
 }
 
@@ -91,5 +90,23 @@
 
 .trust__list {
 	gap: 15px;
+	}
+}
+
+@media (min-width: 1440px) {
+.trust {
+	padding: clamp(85px, 5.833vw, 112px) 0 clamp(157px, 10.417vw, 200px);
+}
+
+.trust__content {
+	gap: 60px;
+}
+
+.trust__text {
+	 font-size: clamp(28px, calc(3.333vw - 20px), 44px);
+}
+
+.trust__list {
+	gap: 20px;
 	}
 }
