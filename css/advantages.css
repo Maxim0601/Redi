@@ -9,6 +9,10 @@
 	margin-bottom: 36px;
 }
 
+.advantages__text {
+	line-height: 1.26;
+}
+
 .advantages__list {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -96,7 +100,7 @@
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	font-size: 14px;
-	line-height: 1.10;
+	line-height: 1.1;
 }
 
 .advantages__card-text {
@@ -105,7 +109,7 @@
 }
 
 @media (min-width: 768px) {
-	.advantages {
+.advantages {
 	padding-bottom: 120px;
 }
 
@@ -117,17 +121,6 @@
 
 .advantages__card {
 	padding: 16px 12px 20px 18px;
-	clip-path: polygon(
-		0 0,
-    49.35% 0,
-    56.49% 21px,
-    100% 21px,
-    100% 100%,
-    0 100%,
-    0 76px,
-    9px 68px,
-    0 59px
-	);
 }
 
 .advantages__number {
@@ -145,5 +138,101 @@
 
 .advantages__card-text {
 	font-size: 14px;
+	}
+}
+
+@media (min-width: 1024px) {
+.advantages {
+	padding-bottom: 150px;
+}
+
+.advantages__header {
+	display: grid;
+	grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+	align-items: start;
+	margin-bottom: 60px;
+	gap: 0;
+}
+
+.advantages__text {
+	max-width: 560px;
+	font-size: 22px;
+}
+
+.advantages__list {
+	width: 90%;
+	margin-left: auto;
+	grid-template-areas: ". first second" "third fourth fifth";
+	gap: 15px;
+}
+
+.advantages__card {
+	min-height: clamp(300px, 28vw, 420px);
+	padding: 24px;
+	gap: 0;
+}
+
+.advantages__number {
+	margin-left: 7px;
+	font-size: 18px;
+}
+
+.advantages__card-content {
+	margin-top: auto;
+	gap: 15px;
+}
+
+.advantages__card-title {
+	font-size: 24px;
+}
+
+.advantages__card-text {
+	font-size: 18px;
+	}
+}
+
+@media (min-width: 1440px) {
+.advantages {
+	padding-bottom: 200px;
+}
+
+.advantages__header {
+	column-gap: 18px;
+	margin-bottom: 74px;
+}
+
+.advantages__text {
+	max-width: none;
+	font-size: clamp(33px, 2.292vw, 44px);
+}
+
+.advantages__list {
+	width: 90%;
+	grid-template-areas: ". first second" "third fourth ." ". . fifth";
+	gap: 20px;
+}
+
+.advantages__card {
+	min-height: clamp(421px, 29.219vw, 561px);
+	padding-top: clamp(29px, 1.98vw, 38px);
+	padding-right: clamp(35px, 2.45vw, 47px);
+  padding-bottom: clamp(86px, 5.94vw, 114px);
+  padding-left: clamp(35px, 2.45vw, 47px);
+}
+
+.advantages__number {
+	margin-left: clamp(7px, 0.469vw, 9px);
+	font-size: clamp(23px, 1.59vw, 30.52px);
+	line-height: 1.14;
+}
+
+.advantages__card-content {
+	max-width: clamp(254px, 17.656vw, 339px);
+	margin-top: auto;
+	gap: 27px;
+}
+
+.advantages__card-title {
+	font-size: clamp(36px, 2.5vw, 48px);
 	}
 }
