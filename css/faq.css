@@ -4,30 +4,21 @@
 }
 
 .faq__intro {
-	position: relative;
+	--cut-top: 32px;
+	--cut-bottom: 75px;
 	display: flex;
 	align-items: center;
-	overflow: hidden;
 	min-height: 44px;
 	background-color: #EAEAEA;
-}
-
-.faq__intro::after {
-	content: '';
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	z-index: 0;
-	width: 75px;
-	height: 44px;
-	background-color: #2F2F2F;
-	clip-path: polygon(0 100%, 43px 0, 100% 0, 100% 100%);
-	pointer-events: none;
+	 clip-path: polygon(
+		0 -2px,
+		calc(100% - var(--cut-top)) -2px,
+		calc(100% - var(--cut-bottom)) 100%,
+		0 100%
+	);
 }
 
 .faq__intro .container {
-	position: relative;
-	z-index: 1;
 	width: 100%;
 }
 
@@ -56,7 +47,7 @@
 	min-height: 75px;
 	background-color: #fff;
 	color: #2F2F2F;
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
 }
 
 .faq .accordion__trigger-text {
@@ -95,4 +86,47 @@
 	font-size: 12px;
 	line-height: 1.14;
 	color: #fff;
+}
+
+@media (min-width: 768px) {
+.faq{
+	padding-bottom: 75px;
+}
+
+.faq__intro {
+	--cut-top: 325px;
+	--cut-bottom: 384px;
+	min-height: 64px;
+}
+
+.faq__accordion {
+	gap: 18px;
+	padding-top: 50px;
+}
+
+.faq .accordion__trigger {
+	padding: 17px 15px;
+}
+
+.faq .accordion__trigger-text {
+	font-size: 20px;
+}
+
+.faq .accordion__trigger-icon {
+	flex-basis: 18px;
+	width: 18px;
+	height: 18px;
+}
+
+.faq .accordion__content {
+	margin-top: 12px;
+}
+
+.faq__cta {
+	max-width: 520px;
+}
+
+.faq__cta-text {
+	font-size: 16px;
+	}
 }
